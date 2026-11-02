@@ -20,7 +20,7 @@ jobs:
           gradle-version: 8.12
 
       - name: Unzip source
-        run: unzip -o donutlike-mod-v3-source.zip
+        run:  unzip -o "$(find . -maxdepth 2 -iname 'donutlike*.zip' | head -1)"
 
       - name: Build
         run: |
